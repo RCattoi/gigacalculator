@@ -10,8 +10,14 @@ html {
     url("../fonts/montserrat-v25-latin-regular.woff") format("woff"),
     url("../fonts/montserrat-v25-latin-regular.ttf") format("truetype"),
     url("../fonts/montserrat-v25-latin-regular.svg#Montserrat") format("svg");
-  background-color: #4c4f5a;
-  color: white;
+}
+header {
+  color: rgb(63, 63, 63);
+}
+.container__principal {
+  display: grid;
+  grid-template-columns: 2fr 11fr;
+  gap: 10px;
 }
 .titulo {
   display: inline-block;
@@ -19,22 +25,39 @@ html {
 }
 .botoes {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80vh;
-  height: 80vh;
-  margin: 0px;
+  flex-direction: column;
   gap: 20px;
+}
+.botoes a {
+  text-align: center;
 }
 
 .botoes__link {
-  padding: 32px 18px;
-  background-color: #838ba5;
+  padding: 16px 6px;
+  background-color: white;
+  border: 1px solid #5293c7;
   border-radius: 5px;
   text-decoration: none;
-  font-weight: bold;
-  color: white;
+  color: #5293c7;
+  transition: 0.5s;
+  /* min-width: 195px; */
+  display: block;
 }
 .botoes__link:hover {
-  background-color: #7685b6;
+  background-color: #5293c7;
+  color: white;
+}
+.container_conteudo {
+  grid-area: 1 / 2;
+}
+.conteudo {
+  display: none;
+  width: 85vw;
+  height: 80vh;
+}
+
+.active {
+  background-color: #5293c7;
+  cursor: unset;
+  color: white;
 }
